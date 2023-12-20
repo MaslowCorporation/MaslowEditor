@@ -1,4 +1,4 @@
-# masloweditor
+# masloweditor 🌎
 
 Some useful utilities for Javascript developers.
 
