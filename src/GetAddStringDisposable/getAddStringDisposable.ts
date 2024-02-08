@@ -17,7 +17,7 @@ export function getAddStringDisposable() {
       await vscode.env.clipboard.writeText(text);
 
       let filePath = editor.document.uri.fsPath;
-      let command = `maslow add-string-quick "${filePath}"`;
+      let command = `npx maslow add-string-quick "${filePath}"`;
 
       let terminal = vscode.window.activeTerminal;
 
