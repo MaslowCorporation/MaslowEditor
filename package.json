@@ -15,7 +15,7 @@
   ],
   "activationEvents": [
     "onCommand:masloweditor972.helloWorld",
-    "onCommand:masloweditor972.addString",
+    "onCommand:masloweditor972.EditCode",
     "onCommand:masloweditor972.moveRefugees",
     "onCommand:masloweditor972.moveCodeToFile",
     "onCommand:masloweditor972.findJohnDoe"
@@ -28,7 +28,7 @@
         "title": "Hello World"
       },
       {
-        "command": "masloweditor972.addString",
+        "command": "masloweditor972.EditCode",
         "title": "Add Intl String"
       },
       {
@@ -51,7 +51,7 @@
         "when": "editorTextFocus"
       },
       {
-        "command": "masloweditor972.addString",
+        "command": "masloweditor972.EditCode",
         "key": "ctrl+shift+i",
         "when": "editorTextFocus"
       },

@@ -8,9 +8,9 @@ Please bear in mind that this is a work in progress, and tons of features will b
 
 ### CTRL + SHIFT + I
 
-Allows you to add the currenly highlighted string 
-(MUST BE A STRING WITH IT'S QUOTES !!!!!)
-to the latest string repository specified during the last use of the ```npx maslow add-string``` command.
+Allows you to modify the currently highlighted code, in the currently focused code tab, 
+
+This shortcut also allows you to add code starting at the current cursor position in the currently focused code tab.
 
 ### CTRL + SHIFT + M
 

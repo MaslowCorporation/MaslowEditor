@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { getAddStringDisposable } from "./GetAddStringDisposable/getAddStringDisposable";
+import { EditCode } from "./EditCode/EditCode";
 import { getFindJohnDoeDisposable } from "./GetFindJohnDoeDisposable/getFindJohnDoeDisposable";
 import { getMoveCodeToFileDisposable } from "./GetMoveCodeToFileDisposable/getMoveCodeToFileDisposable";
 import { getMoveRefugeesDisposable } from "./GetMoveRefugeesDisposable/getMoveRefugeesDisposable";
@@ -14,9 +14,9 @@ import { getMoveRefugeesDisposable } from "./GetMoveRefugeesDisposable/getMoveRe
  * programmeur/créateur/rêveur/utopiste/révolutionnaire (pick one or more ;=)
  */
 export function activate(context: vscode.ExtensionContext) {
-  // crée le raccourci d'ajout de string rapide
+  // crée le raccourci d'editeur de code style Copilot
   // (via ctrl+maj+i)
-  let addStringDisposable = getAddStringDisposable();
+  let editCode = EditCode();
 
   // crée le raccourci de déplacement de fichiers via import
   // (via ctrl+maj+m)
@@ -31,11 +31,11 @@ export function activate(context: vscode.ExtensionContext) {
   let findJohnDoeDisposable = getFindJohnDoeDisposable();
 
   context.subscriptions.push(
-    addStringDisposable,
+    editCode,
     moveRefugeesDisposable,
     moveCodeToFileDisposable,
     findJohnDoeDisposable
   );
 }
 
-export function deactivate() {}
+export function deactivate() { }
