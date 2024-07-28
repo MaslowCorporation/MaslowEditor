@@ -68,3 +68,4 @@ This command will build the extension as a vsix file, it will then print the pat
 DONE  Packaged: C:\Users\YOUR_USERNAME\Desktop\MaslowWorld\MaslowEditor\masloweditor972-0.0.1.vsix (6428 files, 17.14MB)
 
 Open `View / Extensions` then click the 3 horizontal dots to open the options menu, then click on `Install from VSIX`. Then select the .vsix file you just generated. And you're done installing the shizzle ;-)
+
