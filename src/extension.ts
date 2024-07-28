@@ -1,8 +1,9 @@
 import * as vscode from "vscode";
-import { EditCode } from "./EditCode/EditCode";
+import { getEditCodeDisposable } from "./EditCodeDisposable/EditCodeDisposable";
 import { getFindJohnDoeDisposable } from "./GetFindJohnDoeDisposable/getFindJohnDoeDisposable";
 import { getMoveCodeToFileDisposable } from "./GetMoveCodeToFileDisposable/getMoveCodeToFileDisposable";
 import { getMoveRefugeesDisposable } from "./GetMoveRefugeesDisposable/getMoveRefugeesDisposable";
+import { getGoogleLoginDisposable } from "./GetGoogleLoginDisposable/getGoogleLoginDisposable";
 
 /**
  *
@@ -16,7 +17,7 @@ import { getMoveRefugeesDisposable } from "./GetMoveRefugeesDisposable/getMoveRe
 export function activate(context: vscode.ExtensionContext) {
   // crée le raccourci d'editeur de code style Copilot
   // (via ctrl+maj+i)
-  let editCode = EditCode();
+  let editCodeDisposable = getEditCodeDisposable();
 
   // crée le raccourci de déplacement de fichiers via import
   // (via ctrl+maj+m)
@@ -30,11 +31,16 @@ export function activate(context: vscode.ExtensionContext) {
   // (via ctrl+maj+j)
   let findJohnDoeDisposable = getFindJohnDoeDisposable();
 
+  // crée le loggeur via Google
+  // (via ctrl+maj+l)
+  let googleLoginDisposable = getGoogleLoginDisposable();
+
   context.subscriptions.push(
-    editCode,
+    editCodeDisposable,
     moveRefugeesDisposable,
     moveCodeToFileDisposable,
-    findJohnDoeDisposable
+    findJohnDoeDisposable,
+    googleLoginDisposable,
   );
 }
 

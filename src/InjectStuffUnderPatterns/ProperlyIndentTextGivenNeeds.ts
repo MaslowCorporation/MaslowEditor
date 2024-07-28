@@ -1,8 +1,8 @@
-import { Constants } from "./Constants.js";
+import { Constants } from "./Constants";
 import {
   ProperlyIndentFirstLine,
   ProperlyIndentString,
-} from "./ProperlyIndentString.js";
+} from "./ProperlyIndentString";
 
 export function ProperlyIndentTextGivenNeeds(
   indent: string | boolean,

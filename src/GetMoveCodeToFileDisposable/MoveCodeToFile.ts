@@ -8,7 +8,7 @@ import { GetGlobalVariablesFromCode } from "./GetVariablesFromCode";
 import { GetLocalVariablesFromCode } from "./GetLocalVariablesFromCode";
 import { GetVariablesUsedInCode } from "./GetVariablesUsedInCode";
 import * as escodegen from "escodegen";
-import { GetGlobalFunctionsNames } from "../GetGlobalFunctions/GetGlobalFunctions.js";
+import { GetGlobalFunctionsNames } from "../GetGlobalFunctions/GetGlobalFunctions";
 import { ExportGlobalFunctionsUsed } from "../ExportGlobalFunctionsUsed/ExportGlobalFunctionsUsed";
 import { MoveCodePieceToFunction } from "./MoveCodePieceToFunction";
 import { MoveFunctionToFile } from "./MoveFunctionToFile";

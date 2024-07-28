@@ -3,13 +3,13 @@ import * as path from "path";
 import { GetImportsFromCode } from "./GetImportsFromCode";
 import { GetVariablesUsedInCode } from "./GetVariablesUsedInCode";
 import { MoveCodeToFileAttempt } from "./MoveCodeToFileAttempt";
-import { InjectStuffUnderPatterns } from "../InjectStuffUnderPatterns/InjectStuffUnderPatterns.js";
-import { getPathWithForwardSlashes } from "../GetPathWithForwardSlashes/getPathWithForwardSlashes.js";
+import { InjectStuffUnderPatterns } from "../InjectStuffUnderPatterns/InjectStuffUnderPatterns";
+import { getPathWithForwardSlashes } from "../GetPathWithForwardSlashes/getPathWithForwardSlashes";
 import {
   AddDotAndSlashToPath,
   RecalibrateFileImports,
-} from "../RecalibrateFileImports/RecalibrateFileImports.js";
-import { GetGlobalFunctionsNames } from "../GetGlobalFunctions/GetGlobalFunctions.js";
+} from "../RecalibrateFileImports/RecalibrateFileImports";
+import { GetGlobalFunctionsNames } from "../GetGlobalFunctions/GetGlobalFunctions";
 import { ExportGlobalFunctionsUsed } from "../ExportGlobalFunctionsUsed/ExportGlobalFunctionsUsed";
 import { OpenFileInNewTab, ReplaceCodeInFileWith } from "./MoveCodeToFile";
 import { IsRelativePath } from "../IsRelativePath/IsRelativePath";

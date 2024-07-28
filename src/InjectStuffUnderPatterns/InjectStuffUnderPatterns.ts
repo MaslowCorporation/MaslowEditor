@@ -1,11 +1,11 @@
 /* PLOP_INJECT_IMPORT */
-import { DeletePreviousLookalikeLine } from "./DeletePreviousLookalikeLine.js";
+import { DeletePreviousLookalikeLine } from "./DeletePreviousLookalikeLine";
 
 import * as fs from "fs";
 
-import { GetSpacesBeforeCharacters } from "./GetSpacesBeforeCharacters.js";
-import { RemoveEmptyLines } from "./RemoveExtraNewlines.js";
-import { ProperlyIndentTextGivenNeeds } from "./ProperlyIndentTextGivenNeeds.js";
+import { GetSpacesBeforeCharacters } from "./GetSpacesBeforeCharacters";
+import { RemoveEmptyLines } from "./RemoveExtraNewlines";
+import { ProperlyIndentTextGivenNeeds } from "./ProperlyIndentTextGivenNeeds";
 
 function InjectStuffUnderPatterns(filePath: string, patternsAndStuffs: any) {
   // Check if file exists

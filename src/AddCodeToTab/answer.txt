@@ -1,0 +1,26 @@
+Certainly! Here's a TypeScript function named `AddCodeToTab` that performs the described actions:
+
+```typescript
+import * as vscode from 'vscode';
+
+async function AddCodeToTab(code: string) {
+    const editor = vscode.window.activeTextEditor;
+    if (!editor) {
+        vscode.window.showInformationMessage('No active editor');
+        return;
+    }
+
+    const selection = editor.selection;
+
+    await editor.edit(editBuilder => {
+        if (selection.isEmpty) {
+            const position = selection.active;
+            editBuilder.insert(position, code);
+        } else {
+            editBuilder.replace(selection, code);
+        }
+    });
+}
+```
+
+To use this function, make sure you have the necessary setup for developing VS Code extensions. You can call this function as part of a command in your `activate` function or however needed within your extension.

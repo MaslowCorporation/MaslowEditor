@@ -1,0 +1,9 @@
+{
+  "question": "Give me a ts function called AddCodeToTab(code)\n\n\n\nthis function adds code at the current cursor position of the current focused vs code tab,\nif theres a focused tab, but no highlighted text in this tab.\n\nor this function replaces the currently highlighted code in the focused vscode tab, with code,\nif there's some highlighted text in the current focused tab",
+  "questionPath": "question.txt",
+  "answer": {
+    "codePart": "import * as vscode from 'vscode';\n\nasync function AddCodeToTab(code: string) {\n    const editor = vscode.window.activeTextEditor;\n    if (!editor) {\n        vscode.window.showInformationMessage('No active editor');\n        return;\n    }\n\n    const selection = editor.selection;\n\n    await editor.edit(editBuilder => {\n        if (selection.isEmpty) {\n            const position = selection.active;\n            editBuilder.insert(position, code);\n        } else {\n            editBuilder.replace(selection, code);\n        }\n    });\n}\n",
+    "answer": "Certainly! Here's a TypeScript function named `AddCodeToTab` that performs the described actions:\n\n```typescript\nimport * as vscode from 'vscode';\n\nasync function AddCodeToTab(code: string) {\n    const editor = vscode.window.activeTextEditor;\n    if (!editor) {\n        vscode.window.showInformationMessage('No active editor');\n        return;\n    }\n\n    const selection = editor.selection;\n\n    await editor.edit(editBuilder => {\n        if (selection.isEmpty) {\n            const position = selection.active;\n            editBuilder.insert(position, code);\n        } else {\n            editBuilder.replace(selection, code);\n        }\n    });\n}\n```\n\nTo use this function, make sure you have the necessary setup for developing VS Code extensions. You can call this function as part of a command in your `activate` function or however needed within your extension."
+  },
+  "codeFilePath": "AddCodeToTab.ts"
+}

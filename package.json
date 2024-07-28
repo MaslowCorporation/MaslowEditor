@@ -13,23 +13,13 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:masloweditor972.helloWorld",
-    "onCommand:masloweditor972.EditCode",
-    "onCommand:masloweditor972.moveRefugees",
-    "onCommand:masloweditor972.moveCodeToFile",
-    "onCommand:masloweditor972.findJohnDoe"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "masloweditor972.helloWorld",
-        "title": "Hello World"
-      },
-      {
-        "command": "masloweditor972.EditCode",
-        "title": "Add Intl String"
+        "command": "masloweditor972.editCode",
+        "title": "Edit some code in a tab"
       },
       {
         "command": "masloweditor972.moveRefugees",
@@ -40,19 +30,18 @@
         "title": "Move highlighted code to a specific file"
       },
       {
+        "command": "masloweditor972.googleLogin",
+        "title": "Login via Google to load your MaslowGPT API key"
+      },
+      {
         "command": "masloweditor972.findJohnDoe",
         "title": "Find highlighted relative imports if John Doe"
       }
     ],
     "keybindings": [
       {
-        "command": "masloweditor972.helloWorld",
-        "key": "ctrl+alt+l",
-        "when": "editorTextFocus"
-      },
-      {
-        "command": "masloweditor972.EditCode",
-        "key": "ctrl+shift+i",
+        "command": "masloweditor972.editCode",
+        "key": "ctrl+shift+e",
         "when": "editorTextFocus"
       },
       {
@@ -63,6 +52,11 @@
       {
         "key": "ctrl+shift+f",
         "command": "masloweditor972.moveCodeToFile",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "ctrl+shift+l",
+        "command": "masloweditor972.googleLogin",
         "when": "editorTextFocus"
       },
       {
@@ -113,7 +107,10 @@
     "esprima": "^4.0.1",
     "estraverse": "^5.3.0",
     "fs-extra": "^11.1.1",
+    "iconv-lite": "^0.6.3",
     "install": "^0.13.0",
+    "jschardet": "^3.1.3",
+    "maslow-gpt-sdk": "github:MaslowCorporation/maslow-gpt-sdk",
     "npm": "^9.6.5",
     "prettier": "^2.8.7"
   }

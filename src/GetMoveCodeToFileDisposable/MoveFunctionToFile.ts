@@ -3,17 +3,17 @@ import * as path from "path";
 import { GetImportsFromCode } from "./GetImportsFromCode";
 import { GetVariablesUsedInCode } from "./GetVariablesUsedInCode";
 import { MoveCodeToFileAttempt } from "./MoveCodeToFileAttempt";
-import { InjectStuffUnderPatterns } from "../InjectStuffUnderPatterns/InjectStuffUnderPatterns.js";
-import { getPathWithForwardSlashes } from "../GetPathWithForwardSlashes/getPathWithForwardSlashes.js";
+import { InjectStuffUnderPatterns } from "../InjectStuffUnderPatterns/InjectStuffUnderPatterns";
+import { getPathWithForwardSlashes } from "../GetPathWithForwardSlashes/getPathWithForwardSlashes";
 import {
   AddDotAndSlashToPath,
   RecalibrateFileImports,
-} from "../RecalibrateFileImports/RecalibrateFileImports.js";
+} from "../RecalibrateFileImports/RecalibrateFileImports";
 import {
   GetJSFunctionsBodiesFromSample,
   GetGlobalFunctionsNames,
   GetJSFunctionsNamesFromSample,
-} from "../GetGlobalFunctions/GetGlobalFunctions.js";
+} from "../GetGlobalFunctions/GetGlobalFunctions";
 import {
   ExportGlobalFunctionsUsed,
   ExportGlobalVariablesUsed,
